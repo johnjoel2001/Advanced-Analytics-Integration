@@ -18,4 +18,4 @@ This is a real-time interactive analytics dashboard built with **Streamlit** tha
   - Dynamic CPU trend chart
 
 
-Link: 
+Link: https://4pydawbsip.us-east-1.awsapprunner.com/
