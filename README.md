@@ -2,7 +2,6 @@
 
 This is a real-time interactive analytics dashboard built with **Streamlit** that visualizes car performance data (MPG dataset) and monitors live CPU and memory usage using `psutil`.
 
----
 
 ## Features
 
@@ -18,13 +17,5 @@ This is a real-time interactive analytics dashboard built with **Streamlit** tha
   - Live CPU and memory usage display
   - Dynamic CPU trend chart
 
----
-
-## Dataset
-
-- **Source**: [Seaborn GitHub - MPG Dataset](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/mpg.csv)
-- Columns: `mpg`, `cylinders`, `horsepower`, `weight`, `origin`, `name`, etc.
-
----
 
 Link: 
