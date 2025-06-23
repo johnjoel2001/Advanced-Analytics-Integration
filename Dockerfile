@@ -1,12 +1,11 @@
-# Use a lightweight Python image
+# Use a minimal Python image
 FROM python:3.11-slim
 
-# Environment setup
+# Set environment
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-ENV PORT=8501
 
-# Set work directory
+# Working directory
 WORKDIR /app
 
 # Install dependencies
@@ -16,8 +15,8 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy app code
 COPY . .
 
-# Expose the expected port
-EXPOSE $PORT
+# Expose the dynamic port (App Runner will assign this)
+EXPOSE 8501
 
-# Run your Streamlit app on the correct port & address
-CMD streamlit run car_dashboard.py --server.port=$PORT --server.address=0.0.0.0 --server.enableCORS=false
+# Run using shell so $PORT is interpreted correctly
+CMD ["sh", "-c", "streamlit run car_dashboard.py --server.port=$PORT --server.address=0.0.0.0 --server.enableCORS=false"]
